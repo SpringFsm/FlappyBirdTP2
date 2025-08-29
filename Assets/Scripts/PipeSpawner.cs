@@ -13,13 +13,17 @@ public class PipeSpawner : MonoBehaviour
     
     public GameObject pipe;
 
+    private GameManager gm;
+
     private void Start()
     {
         timer = 0;
+        gm = FindObjectOfType<GameManager>();
     }
 
     private void Update()
     {
+        if(gm.gameOver){ return; }
         if (timer <= 0)
         {
             if (count == rankupCount) // every 5 spawns, time to spawn is shorter

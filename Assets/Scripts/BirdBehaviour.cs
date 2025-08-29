@@ -10,6 +10,8 @@ public class BirdBehaviour : MonoBehaviour
     
     private GameManager gameManager;
 
+    public AudioSource flapSound;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -22,6 +24,8 @@ public class BirdBehaviour : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * jumpForce);
+            flapSound.Play();
+
         }
 
         if (gameManager.gameOver)

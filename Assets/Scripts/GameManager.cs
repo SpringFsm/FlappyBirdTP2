@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
 
     public Text scoreNb;
     public int score = 0;
+
+    public Restart restart;
+    
     private void Start()
     {
         Time.timeScale = 0;
@@ -20,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && Time.timeScale == 0)
         {
             startText.gameObject.SetActive(false);
             Time.timeScale = 1;
@@ -29,6 +32,11 @@ public class GameManager : MonoBehaviour
         if (gameOver)
         {
             endText.gameObject.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                restart.RestartGame();
+            }
         }
         
         scoreNb.text = "" + score;

@@ -10,6 +10,7 @@ d'objets dans un espace 2D.
 
 Additions personnelles : 
 - Visual feedback avec un changement de couleur rapide des piliers quand l'oiseau les traverse.
+
 TODO :
 - Skin customisation
 - High Score system

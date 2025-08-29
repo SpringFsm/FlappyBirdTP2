@@ -1,6 +1,7 @@
 TP2 : Unity 2D
 
 Programmer le jeu Flappy Bird dans Unity
+
 Objectifs :
 - Construire une version de base du jeu Flappy Bird en utilisant Unity.
 - Appliquer des connaissances en C#, physique, animation, collisions, et contrôle

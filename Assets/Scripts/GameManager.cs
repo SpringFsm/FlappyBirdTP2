@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public Text startText;
-    public Text endText;
+    public GameObject startText;
+    public GameObject endText;
+    public GameObject skinChoose;
     
     public bool gameOver = false;
 
@@ -25,13 +26,15 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && Time.timeScale == 0)
         {
-            startText.gameObject.SetActive(false);
+            startText.SetActive(false);
+            skinChoose.SetActive(false);
+
             Time.timeScale = 1;
         }
 
         if (gameOver)
         {
-            endText.gameObject.SetActive(true);
+            endText.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.Space))
             {

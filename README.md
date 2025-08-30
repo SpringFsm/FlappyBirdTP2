@@ -8,9 +8,9 @@ Objectifs :
 d'objets dans un espace 2D.
 - Comprendre la gestion des scènes et le changement entre différents états du jeu.
 
+
+
+
 Additions personnelles : 
 - Visual feedback avec un changement de couleur rapide des piliers quand l'oiseau les traverse.
-
-TODO :
-- Skin customisation
-- High Score system
+- 3 skins d'oiseau différents pour jouer
